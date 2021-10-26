@@ -23,6 +23,10 @@ app.get('/', (req, res)=> {
     rollbar.info('html file served successfully')
 })
 
+app.get('/style', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/styles.css'))
+})
+
 app.listen(port, () => console.log(`Take us to warp ${port}`))
 
 app.post('/api/student', (req, res) => {
