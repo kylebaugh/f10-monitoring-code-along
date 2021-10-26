@@ -12,6 +12,8 @@ const app = express()
 
 app.use(rollbar.errorHandler())
 
+app.use(express.json())
+
 const port = process.env.PORT || 4545
 
 let students = []
