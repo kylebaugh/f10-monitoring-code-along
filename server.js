@@ -29,7 +29,7 @@ app.post('/api/student', (req, res) => {
     let {name} = req.body
     name = name.trim()
 
-    const index = students.findIndex(studentName => studentName === name)
+    const index = students.findIndex(studentName=> studentName === name)
 
     if(index === -1 && name !== ''){
         students.push(name)
