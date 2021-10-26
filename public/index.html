@@ -28,11 +28,11 @@
                     res.data.forEach(studentName => {
                         container.innerHTML += `<p>${studentName}</p>`
                     })
-                    
+
                     console.log(res)
                 })
                 .catch(err => {
-                    nameInput = ''
+                    nameInput.value = ''
                     
                     const notif = document.createElement('aside')
                     notif.innerHTML = `<p>${err.response.data}</p>
